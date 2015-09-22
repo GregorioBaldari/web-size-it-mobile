@@ -1,4 +1,4 @@
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngTouch']);
 app.controller('myCtrl', function ($scope) {
     $scope.statusCtrl= "OK";
     console.log("LOG: myCtrl Status: " + $scope.statusCtrl);
