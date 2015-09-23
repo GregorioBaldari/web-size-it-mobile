@@ -9,37 +9,23 @@
 <body>
 
 <div ng-app="myApp" ng-controller="myCtrl">
-    <!--div class="container">
-        <div class="row">
-            <div class="col-xs-7">
-                <p>R: <input type="number" min="1" max="5" ng-model="risk" ng-change="changeRisk(risk)"></p>
-                <p>C: <input type="number"  min="1" max="5" ng-model="complexity" ng-change="changeComplexity(complexity)"></p>
-                <p>E: <input type="number"  min="1" max="5" ng-model="effort" ng-change="changeEffort(effort)"></p>
-            </div>
-            <div class="col-xs-4">
-                <p ng-bind="size"></p>
-            </div>
-        </div>
-    </div-->
-    <!--div class="container-fluid">
-        <div class="row selectorRow">
-            <div class="col-xs-4">R:</div>
-            <div class="col-xs-3"><input type="number" min="1" max="5" ng-model="risk" ng-click="changeRisk(risk)"></div>
-        </div>
-        <div class="row">
-            <div class="col-xs-4">C:</div>
-            <div class="col-xs-3"><input type="number"  min="1" max="5" ng-model="complexity" ng-click="changeComplexity(complexity)"></div>
-            <div class="col-xs-4"><p ng-bind="size"></p></div>
-        </div>
-        <div class="row">
-            <div class="col-xs-4">E:</div>
-            <div class="col-xs-3"><input type="number"  min="1" max="5" ng-model="effort" ng-click="changeEffort(effort)"></div>
-        </div>
-    </div>
-    <!--Experiment with Buttons Group Boostrap-->
     <div class="panel panel-default">
         <div class="panel-heading selector-heading">
             Risk
+        </div>
+        <div class="panel-body">
+            <div class="btn-group parameterSelector" role="group" aria-label="...">
+                <button type="button" class="btn btn-default parameterSelectorItem" ng-model="risk" ng-click="changeRisk(risk)">1</button>
+                <button type="button" class="btn btn-default parameterSelectorItem" ng-click="changeRisk(risk)">2</button>
+                <button type="button" class="btn btn-default parameterSelectorItem" ng-click="changeRisk(risk)">3</button>
+                <button type="button" class="btn btn-default parameterSelectorItem" ng-click="changeRisk(risk)">4</button>
+                <button type="button" class="btn btn-default parameterSelectorItem" ng-click="changeRisk(risk)">5</button>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading selector-heading">
+            Complexity
         </div>
         <div class="panel-body">
             <div class="btn-group parameterSelector" role="group" aria-label="...">
@@ -51,50 +37,20 @@
             </div>
         </div>
     </div>
-    
-    
-    <!--Experiment with Dropdown Boostrap-->
-    <!--div class="dropdown">
-        <button class="btn btn-default dropdown-toggle parameterSelector" type="button" id="dropdownMenuRisk" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Risk
-        <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu parameterSelections" aria-labelledby="dropdownMenuRisk">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-      </ul>
-    </div>
-    <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle parameterSelector" type="button" id="dropdownMenuEffort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+     <div class="panel panel-default">
+        <div class="panel-heading selector-heading">
             Effort
-        <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu parameterSelections" aria-labelledby="dropdownMenuEffort">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-      </ul>
+        </div>
+        <div class="panel-body">
+            <div class="btn-group parameterSelector" role="group" aria-label="...">
+                <button type="button" class="btn btn-default parameterSelectorItem">1</button>
+                <button type="button" class="btn btn-default parameterSelectorItem">2</button>
+                <button type="button" class="btn btn-default parameterSelectorItem">3</button>
+                <button type="button" class="btn btn-default parameterSelectorItem">4</button>
+                <button type="button" class="btn btn-default parameterSelectorItem">5</button>
+            </div>
+        </div>
     </div>
-    <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle parameterSelector" type="button" id="dropdownMenuComplexity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Complexity
-        <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu parameterSelections" aria-labelledby="dropdownMenuComplexity">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-      </ul>
-    </div>
-
-    <!--Experiment-->
 </div>
 
 </body>
