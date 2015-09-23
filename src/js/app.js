@@ -10,7 +10,7 @@ mainApp.config(['$routeProvider',
         templateUrl: 'template/sinergy.html',
         controller: 'sinergyCtrl'
       }).
-      when('/traditonal', {
+      when('/traditional', {
         templateUrl: 'template/traditional.html',
         controller: 'traditionalCtrl'
       }).

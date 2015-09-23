@@ -12,12 +12,10 @@ appControllers.controller('mainController', function ($scope, $route, $routePara
 */
 
 appControllers.controller('traditionalCtrl', function ($scope) {
-    $scope.params = $routeParams;
     console.log("Tradtional controller loaded");
 });
 
 appControllers.controller('sinergyCtrl', function ($scope) {
-    $scope.params = $routeParams;
     console.log("Sinergy controller loaded");
     $scope.risk = 1;
     $scope.effort = 1;
