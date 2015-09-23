@@ -1,5 +1,6 @@
-var app = angular.module('myApp', ['ui.bootstrap']);
-app.controller('myCtrl', function ($scope) {
+var synergyApp = angular.module('sinergy', ['ui.bootstrap']);
+var traditionalApp = angular.module('traditional', ['ui.bootstrap']);
+synergyApp.controller('sinergyCtrl', function ($scope) {
     $scope.statusCtrl = "OK";
     console.log("LOG: myCtrl Status: " + $scope.statusCtrl);
     
