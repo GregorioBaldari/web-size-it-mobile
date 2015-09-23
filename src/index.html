@@ -14,12 +14,12 @@
             Risk
         </div>
         <div class="panel-body">
-            <div class="btn-group parameterSelector" role="group" aria-label="...">
-                <button type="button" class="btn btn-default parameterSelectorItem" ng-model="risk" ng-click="changeRisk(risk)">1</button>
-                <button type="button" class="btn btn-default parameterSelectorItem" ng-click="changeRisk(risk)">2</button>
-                <button type="button" class="btn btn-default parameterSelectorItem" ng-click="changeRisk(risk)">3</button>
-                <button type="button" class="btn btn-default parameterSelectorItem" ng-click="changeRisk(risk)">4</button>
-                <button type="button" class="btn btn-default parameterSelectorItem" ng-click="changeRisk(risk)">5</button>
+            <div class="btn-group parameterSelector">
+                <label class="btn btn-primary parameterSelectorItem" ng-model="risk" btn-radio="1">1</label>
+                <label class="btn btn-primary parameterSelectorItem" ng-model="risk" btn-radio="2">2</label>
+                <label class="btn btn-primary parameterSelectorItem" ng-model="risk" btn-radio="3">3</label>
+                <label class="btn btn-primary parameterSelectorItem" ng-model="risk" btn-radio="4">4</label>
+                <label class="btn btn-primary parameterSelectorItem" ng-model="risk" btn-radio="5">5</label>
             </div>
         </div>
     </div>
@@ -28,30 +28,34 @@
             Complexity
         </div>
         <div class="panel-body">
-            <div class="btn-group parameterSelector" role="group" aria-label="...">
-                <button type="button" class="btn btn-default parameterSelectorItem">1</button>
-                <button type="button" class="btn btn-default parameterSelectorItem">2</button>
-                <button type="button" class="btn btn-default parameterSelectorItem">3</button>
-                <button type="button" class="btn btn-default parameterSelectorItem">4</button>
-                <button type="button" class="btn btn-default parameterSelectorItem">5</button>
+            <div class="btn-group parameterSelector">
+                <label class="btn btn-primary parameterSelectorItem" ng-model="complexity" btn-radio="1">1</label>
+                <label class="btn btn-primary parameterSelectorItem" ng-model="complexity" btn-radio="2">2</label>
+                <label class="btn btn-primary parameterSelectorItem" ng-model="complexity" btn-radio="3">3</label>
+                <label class="btn btn-primary parameterSelectorItem" ng-model="complexity" btn-radio="4">4</label>
+                <label class="btn btn-primary parameterSelectorItem" ng-model="complexity" btn-radio="5">5</label>
             </div>
         </div>
     </div>
-     <div class="panel panel-default">
+     <div class="panel panel-default">  
         <div class="panel-heading selector-heading">
             Effort
         </div>
         <div class="panel-body">
-            <div class="btn-group parameterSelector" role="group" aria-label="...">
-                <button type="button" class="btn btn-default parameterSelectorItem">1</button>
-                <button type="button" class="btn btn-default parameterSelectorItem">2</button>
-                <button type="button" class="btn btn-default parameterSelectorItem">3</button>
-                <button type="button" class="btn btn-default parameterSelectorItem">4</button>
-                <button type="button" class="btn btn-default parameterSelectorItem">5</button>
+            <div class="btn-group parameterSelector">
+                <label class="btn btn-primary parameterSelectorItem" ng-model="effort" btn-radio="1">1</label>
+                <label class="btn btn-primary parameterSelectorItem" ng-model="effort" btn-radio="2">2</label>
+                <label class="btn btn-primary parameterSelectorItem" ng-model="effort" btn-radio="3">3</label>
+                <label class="btn btn-primary parameterSelectorItem" ng-model="effort" btn-radio="4">4</label>
+                <label class="btn btn-primary parameterSelectorItem" ng-model="effort" btn-radio="5">5</label>
             </div>
         </div>
     </div>
+    <div>
+<p class="size-result">{{size}}</p>    
 </div>
+</div>
+
 
 </body>
     
@@ -63,6 +67,7 @@
     ================================================== -->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src="js/angular-touch.min.js"></script>
+    <script src="js/ui-bootstrap-0.13.4.min.js"></script>
 
     
     <!-- JQuery

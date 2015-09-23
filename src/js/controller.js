@@ -1,8 +1,34 @@
-var app = angular.module('myApp', ['ngTouch']);
+var app = angular.module('myApp', ['ui.bootstrap']);
 app.controller('myCtrl', function ($scope) {
-    $scope.statusCtrl= "OK";
+    $scope.statusCtrl = "OK";
     console.log("LOG: myCtrl Status: " + $scope.statusCtrl);
     
+    $scope.risk = 1;
+    $scope.effort = 1;
+    $scope.complexity = 1;
+    $scope.size  = "Select value above"
+    
+    $scope.$watch( 'risk', function(newValue, oldValue){
+        //console.log("LOG: Size: " + $scope.risk);
+        $scope.updateSize();
+    });
+    
+    $scope.$watch( 'effort', function(newValue, oldValue){
+        //console.log("LOG: Size: " + $scope.effort);
+        $scope.updateSize();
+    });
+    
+    $scope.$watch( 'complexity', function(newValue, oldValue){
+        //console.log("LOG: Size: " + $scope.complexity);
+        $scope.updateSize();
+    });
+                         
+    $scope.updateSize = function(size){  
+        $scope.size = $scope.risk * ($scope.complexity + $scope.effort);
+        console.log("LOG: Size: " + $scope.size);
+    };                     
+                    
+   /* 
     $scope.changeRisk = function(risk){
         $scope.risk = risk;
         //console.log("LOG: Risk: " + $scope.risk);
@@ -30,6 +56,7 @@ app.controller('myCtrl', function ($scope) {
         console.log("LOG: Size: " + $scope.size);
         console.log("LOG: Size: " + $scope.size);      
     };
+    */
     
 });
 

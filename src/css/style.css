@@ -3,13 +3,25 @@ commands-container {
 }
 
 .parameterSelector{
-    width: 100%;   
+    width: 100%; 
 }
 
 .parameterSelectorItem{
+    float: left;
     width: 20%;
+        
+    /*width: 20%;*/
 }
 
 .selector-heading{
     text-align: -webkit-center;
+}
+
+.nav, .pagination, .carousel, .panel-title a { 
+    cursor: pointer; 
+}
+
+.size-result{
+    text-align: -webkit-center;
+    font-size: 5em;
 }
