@@ -1,3 +1,15 @@
 commands-container {
     float: left
 }
+
+.parameterSelector{
+    width: 100%;   
+}
+
+.parameterSelectorItem{
+    width: 20%;
+}
+
+.selector-heading{
+    text-align: -webkit-center;
+}
