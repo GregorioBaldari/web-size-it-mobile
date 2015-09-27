@@ -12,6 +12,11 @@
             <a href="#/sinergy">Sinergy</a>
         <div ng-view></div>
     </div>
+    <div ng-controller="connectionCtrl">
+        <button type="button" class="btn btn-primary" ng-model="connection" btn-checkbox btn-checkbox-true="on" btn-checkbox-false="off">
+                Connect: {{connection}}
+            </button>
+    </div>
 </body>
     
     <!-- Phonegap for Adobe PhoneGap builder
@@ -36,4 +41,8 @@
     
     <script src="js/controller.js"></script>
     <script src="js/app.js"></script>
+    
+    <!-- SocketIO
+    ================================================== -->
+    <script src="js/socket.io.js"></script>
 </html>

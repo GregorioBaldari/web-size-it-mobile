@@ -1,6 +1,6 @@
 var mainApp = angular.module('mainApp', [
-  'ngRoute',
-  'appControllers'
+    'ngRoute',
+    'appControllers'
 ]);
 
 mainApp.config(['$routeProvider',
@@ -18,3 +18,17 @@ mainApp.config(['$routeProvider',
         redirectTo: '/sinergy'
       });
   }]);
+
+//FInd a way to set global variable. Or is $scope enought?
+mainApp.service('appVars', function () {
+        var socket;
+
+        return {
+            getSocket: function () {
+                return socket;
+            },
+            setSocket: function(value) {
+                socket = value;
+            }
+        };
+    });
