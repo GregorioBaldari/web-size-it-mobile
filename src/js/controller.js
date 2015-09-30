@@ -1,23 +1,30 @@
 var appControllers = angular.module('appControllers', ['ngRoute', 'ui.bootstrap']);
-//var synergyApp = angular.module('sinergy', ['ui.bootstrap']);
-//var traditionalApp = angular.module('traditional', ['ui.bootstrap']);
 
-/*
-appControllers.controller('mainController', function ($scope, $route, $routeParams, $location) {
-    console.log("Main controller loaded");
-    $scope.$route = $route;
-    $scope.$location = $location;
-    $scope.$routeParams = $routeParams;
-})
-*/
-
-/* TO DO
-/1. Set connection to false on load applicatio
-/2. When connnection switched to on check if io is already running
-/3. If not create connection
-/4. Add in traditional and synergy controller logic to send the size via io
-/5. On Connection false close connection
-/6. Don't send anything in controller to io
+/* This controller can Work if you find a way to inject the socket in the watch handler
+appControllers.controller('connectionCtrl', ['$scope', 'socket', function ($scope, socket) { 
+    socket.on('connect', function (data) {
+      console.log("connected")
+    });
+    
+    socket.on('event', function(data){
+        console.log('Data received: ' + data);
+    });
+    
+    socket.on('disconnect', function(){
+        console.log('Disconnected');
+    });
+    
+    $scope.$watch('connection', function (newValue, oldValue) {
+        console.log('Connection is: ' + newValue);
+        if(newValue) {
+            if (socket.disconnected) {
+                socket.connect();
+            }
+        } else {
+            socket.disconnect()
+        }
+    });
+}]);
 */
 
 appControllers.controller('connectionCtrl', function ($scope, appVars) {
