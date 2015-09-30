@@ -19,14 +19,14 @@ mainApp.config(['$routeProvider', function($routeProvider) {
 }]);
 
 mainApp.service('appVars', function () {
-    var socket;
+    var temp;
     return {
-        getSocket: function () {
-            return socket;
+        getTemp: function () {
+            return temp;
         },
-        setSocket: function(value) {
-            socket = value;
-        }
+        setTemp: function(value) {
+            temp = value;
+        },
     };
 });
 

@@ -7,16 +7,20 @@
     
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <body>
+    <h1>WeSizeIT (Mobile)</h1>
+    <span ng-controller="connectionCtrl" class="online">online</span>
     <div>
-            <a href="#/traditional">Traditional</a>
-            <a href="#/sinergy">Sinergy</a>
+        <!--
+        <a href="#/traditional">Traditional</a>
+        <a href="#/sinergy">Sinergy</a>
+        -->
         <div ng-view></div>
     </div>
-    <div ng-controller="connectionCtrl">
+    <!--div ng-controller="connectionCtrl">
         <button type="button" class="btn btn-primary" ng-model="connection" btn-checkbox btn-checkbox-true="on" btn-checkbox-false="off">
                 Connect: {{connection}}
             </button>
-    </div>
+    </div-->
 </body>
     
     <!-- Phonegap for Adobe PhoneGap builder
