@@ -1,4 +1,23 @@
-var appControllers = angular.module('appControllers', ['ngRoute', 'ui.bootstrap']);
+var appControllers = angular.module('appControllers', ['ngRoute', 'ui.bootstrap','pageslide-directive']);
+
+appControllers.controller('menuCtrl', ['$scope', 'socket', function ($scope, socket) {
+    
+    //console.log("Tradtional controller loaded");
+    
+    $scope.checked = false; // This will be binded using the ps-open attribute
+    
+    $scope.toggle = function(){
+        $scope.checked = !$scope.checked
+    }
+    
+    $scope.$watch('userName', function (newValue, oldValue) {
+        console.log(newValue);
+        socket.emit('changeName', {
+          userName: $scope.userName
+        });
+    });
+
+}]);
 
 appControllers.controller('connectionCtrl', ['$scope', 'socket', function ($scope, socket) { 
     socket.on('connect', function (data) {

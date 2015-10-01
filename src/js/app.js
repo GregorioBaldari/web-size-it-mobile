@@ -1,6 +1,7 @@
 var mainApp = angular.module('mainApp', [
     'ngRoute',
-    'appControllers'
+    'appControllers',
+    "pageslide-directive"
 ]);
 
 mainApp.config(['$routeProvider', function($routeProvider) {
@@ -31,7 +32,7 @@ mainApp.service('appVars', function () {
 });
 
 mainApp.factory('socket', ['$rootScope', function ($rootScope) {
-  var socket = io('http://localhost:3000');
+  var socket = io("https://secret-lake-6472.herokuapp.com/");
 
   return {
     on: function (eventName, callback) {
