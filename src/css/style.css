@@ -28,6 +28,17 @@ commands-container {
     font-size: 5em;
 }
 
+.menu-panel {
+   background: #eee;
+}
+
+.open-menu-btn{
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    color: darkgray;
+}
+
 h1 {
     background-color: #0275d8;
     margin-top: 0;
@@ -35,6 +46,7 @@ h1 {
     color: #fff;
     font-size: 14px;
     padding: 2px;
+    padding-left: 60px;
 }
 
 .online{

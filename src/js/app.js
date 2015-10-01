@@ -1,6 +1,7 @@
 var mainApp = angular.module('mainApp', [
     'ngRoute',
-    'appControllers'
+    'appControllers',
+    "pageslide-directive"
 ]);
 
 mainApp.config(['$routeProvider', function($routeProvider) {
