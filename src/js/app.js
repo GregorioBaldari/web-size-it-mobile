@@ -4,6 +4,7 @@ var mainApp = angular.module('mainApp', [
     "pageslide-directive"
 ]);
 
+/* Working but removed for now.
 mainApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
     when('/sinergy', {
@@ -18,22 +19,34 @@ mainApp.config(['$routeProvider', function($routeProvider) {
         redirectTo: '/sinergy'
     });
 }]);
+*/
 
+/* Not needed any more
 mainApp.service('appVars', function () {
-    var temp;
+    var userName;
+    var model;
     return {
-        getTemp: function () {
-            return temp;
+        getModel: function(){
+            return model;
         },
-        setTemp: function(value) {
-            temp = value;
+        
+        setModel: function(value){
+        },
+        
+        getUserName: function () {
+            return userName;
+        },
+        
+        setUserName: function(value) {
+            userName = value;
         },
     };
 });
+*/
 
 mainApp.factory('socket', ['$rootScope', function ($rootScope) {
-  var socket = io("https://secret-lake-6472.herokuapp.com/");
-
+  //var socket = io("https://secret-lake-6472.herokuapp.com/");
+ var socket = io('http://localhost:3000');
   return {
     on: function (eventName, callback) {
         function wrapper() {
