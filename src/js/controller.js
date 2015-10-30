@@ -6,8 +6,8 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
         effort: 1,
         complexity: 1,
         size: "Select values above",
-        userName: undefined,
-        userId: undefined
+        userName: "Anonymous",
+        //userId: undefined
     };
     
     //Menu open/close variable
@@ -35,8 +35,7 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
         if (newValue !== oldValue) {
             $scope.sendModel();
         }
-    });
-          
+    });          
                          
     $scope.sendModel = function () {  
         $scope.model.size = $scope.model.risk * ($scope.model.complexity + $scope.model.effort);
@@ -47,7 +46,7 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
             complexity: $scope.model.complexity,
             size: $scope.model.size,
             userName: $scope.model.userName,
-            userId: $scope.model.userId
+            //userId: $scope.model.userId
         });
     }
     
@@ -60,13 +59,14 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
     //This can be removed. Name is sent now when user modifies data.
     //When remove this callback remove olso the 'ok' btn on view.
     //Keep this if you want to modify the name on real time (Nice to have but not needed
-    $scope.sendName = function() {
+    /*$scope.sendName = function() {
         socket.emit('newUser', {
               userName: appVars.getUserName()
             });
         console.log('Name sent: ' + appVars.getUserName());
     };
-
+    */
+    
     //When connection is established make green the connection icon
     socket.on('connect', function (data) {
         console.log("connected");

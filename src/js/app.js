@@ -44,9 +44,15 @@ mainApp.service('appVars', function () {
 });
 */
 
+//Change socket configuration to link to server on local or remote.
+//To use server on local use 'node server.js' command
 mainApp.factory('socket', ['$rootScope', function ($rootScope) {
-var socket = io("https://secret-lake-6472.herokuapp.com/");
- //var socket = io('http://localhost:3000');
+  //The following namespace is used on server side and client app
+    //TO DO
+    //Let's the user input a namespace nand connet
+    var projectSpace = 'projectSpace';
+    //var socket = io("https://secret-lake-6472.herokuapp.com/");
+  var socket = io('http://localhost:3000/' + projectSpace);
   return {
     on: function (eventName, callback) {
         function wrapper() {
