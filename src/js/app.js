@@ -50,8 +50,10 @@ mainApp.factory('socket', ['$rootScope', function ($rootScope) {
   //The following namespace is used on server side and client app
     //TO DO
     //Let's the user input a namespace nand connet
-    var projectSpace = 'projectSpace';
-    var socket = io("https://secret-lake-6472.herokuapp.com/" + + projectSpace);
+    //var projectSpace = 'projectSpace';
+    //var socket = io("https://secret-lake-6472.herokuapp.com/" + + projectSpace);
+    //var socket = io('http://localhost:3000/' + projectSpace);
+    var socket = io("https://secret-lake-6472.herokuapp.com");
     //var socket = io('http://localhost:3000/' + projectSpace);
   return {
     on: function (eventName, callback) {
