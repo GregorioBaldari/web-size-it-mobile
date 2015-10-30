@@ -4,6 +4,7 @@ var mainApp = angular.module('mainApp', [
     "pageslide-directive"
 ]);
 
+/* Working but removed for now.
 mainApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
     when('/sinergy', {
@@ -18,22 +19,40 @@ mainApp.config(['$routeProvider', function($routeProvider) {
         redirectTo: '/sinergy'
     });
 }]);
+*/
 
+/* Not needed any more
 mainApp.service('appVars', function () {
-    var temp;
+    var userName;
+    var model;
     return {
-        getTemp: function () {
-            return temp;
+        getModel: function(){
+            return model;
         },
-        setTemp: function(value) {
-            temp = value;
+        
+        setModel: function(value){
+        },
+        
+        getUserName: function () {
+            return userName;
+        },
+        
+        setUserName: function(value) {
+            userName = value;
         },
     };
 });
+*/
 
+//Change socket configuration to link to server on local or remote.
+//To use server on local use 'node server.js' command
 mainApp.factory('socket', ['$rootScope', function ($rootScope) {
-  var socket = io("https://secret-lake-6472.herokuapp.com/");
-
+  //The following namespace is used on server side and client app
+    //TO DO
+    //Let's the user input a namespace nand connet
+    var projectSpace = 'projectSpace';
+    //var socket = io("https://secret-lake-6472.herokuapp.com/");
+  var socket = io('http://localhost:3000/' + projectSpace);
   return {
     on: function (eventName, callback) {
         function wrapper() {

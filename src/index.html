@@ -6,35 +6,72 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/foundation/5.0.0/css/foundation.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
-<body>
+<head>
+    <title>Scrumplify</title>
+</head>
+<body ng-controller="appCtrl">
     <h1>WeSizeIT (Mobile)</h1>
-    <span ng-controller="connectionCtrl" class="online">online</span>
+    <span class="online">online</span>
     <div>
-        <!--
-        <a href="#/traditional">Traditional</a>
-        <a href="#/sinergy">Sinergy</a>
-        -->
-        <div ng-view></div>
+        <div class="panel panel-default">
+            <div class="panel-heading selector-heading">
+                Risk
+            </div>
+            <div class="panel-body">
+                <div class="btn-group parameterSelector">
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.risk" btn-radio="1">1</label>
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.risk" btn-radio="2">2</label>
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.risk" btn-radio="3">3</label>
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.risk" btn-radio="4">4</label>
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.risk" btn-radio="5">5</label>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading selector-heading">
+                Complexity
+            </div>
+            <div class="panel-body">
+                <div class="btn-group parameterSelector">
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.complexity" btn-radio="1">1</label>
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.complexity" btn-radio="2">2</label>
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.complexity" btn-radio="3">3</label>
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.complexity" btn-radio="4">4</label>
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.complexity" btn-radio="5">5</label>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">  
+            <div class="panel-heading selector-heading">
+                Effort
+            </div>
+            <div class="panel-body">
+                <div class="btn-group parameterSelector">
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="1">1</label>
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="2">2</label>
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="3">3</label>
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="4">4</label>
+                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="5">5</label>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="size-result">{{model.size}}</p>    
+        </div>
     </div>
-    <div ng-controller="menuCtrl">
+    <div>
         <a class="open-menu-btn" href="" ng-click="toggle()">Menu</a>
         <pageslide class= "menu-panel" ps-open="checked" ps-side="left" ps-push="true">
             <div style="padding:20px" id="demo-right">
-                        <h2>Hello User</h2>
-                        <p>Tell me whou you are</p>
-                        <div class="input-group">
-                            <span class="input-group-addon" id="basic-addon2">Username</span>
-                            <input ng-model="userName" type="text" class="form-control" placeholder="Type here.." aria-describedby="basic-addon2">
-                        </div>
-                        <a ng-click="toggle()" class="tiny button" >Close</a>
+                <h2>Hello User</h2>
+                <p>Tell me whou you are</p>
+                <div class="input-group">
+                    <input ng-model="model.userName" type="text" class="form-control" placeholder="Type here.." aria-describedby="basic-addon2">
+                </div>
+                <a ng-click="toggle()" class="tiny button" >Close</a>
             </div>
         </pageslide>
     </div>
-    <!--div ng-controller="connectionCtrl">
-        <button type="button" class="btn btn-primary" ng-model="connection" btn-checkbox btn-checkbox-true="on" btn-checkbox-false="off">
-                Connect: {{connection}}
-            </button>
-    </div-->
 </body>
     
     <!-- Phonegap for Adobe PhoneGap builder
