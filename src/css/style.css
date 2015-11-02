@@ -11,6 +11,14 @@ commands-container {
     width: 20%;
 }
 
+.risk-selector {
+    width: 33.3%;
+}
+
+.complexity-selector{
+    width: 25%;
+}
+
 .parameterSelectorItemTraditional{
     width: 25%;
 }
