@@ -4,8 +4,8 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
     $scope.model = {
         risk: 1,
         effort: 1,
-        complexity: 1,
-        size: "Select values above",
+        complexity: 0,
+        size: 1,
         connected: "true",
         userName: "Anonymous"
         //userId: undefined
