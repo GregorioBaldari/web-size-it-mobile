@@ -64,7 +64,10 @@ h1 {
     top: 4px;
     right: 5px;
 }
-
+#summaryTable{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
 .menu-btn {
     border: none;
     display: inline-block;

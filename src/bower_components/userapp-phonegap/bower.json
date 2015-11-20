@@ -1,0 +1,5 @@
+{
+    "name": "userapp-phonegap",
+    "version": "1.2.0",
+    "main": "./phonegap.userapp.js"
+}

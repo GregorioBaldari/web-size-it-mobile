@@ -1,0 +1,15 @@
+{
+  "name": "userapp-phonegap",
+  "version": "1.2.0",
+  "main": "./phonegap.userapp.js",
+  "homepage": "https://github.com/userapp-io/userapp-phonegap",
+  "_release": "1.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.0",
+    "commit": "8e0f51bd83ae027e84c29bfa33463f0577b0b484"
+  },
+  "_source": "git://github.com/userapp-io/userapp-phonegap.git",
+  "_target": "*",
+  "_originalSource": "userapp-phonegap"
+}
