@@ -1,15 +1,33 @@
-var appControllers = angular.module('appControllers', ['ngRoute', 'ui.bootstrap','pageslide-directive']);
+var appControllers = angular.module('appControllers', ['ngRoute', 'ui.bootstrap','pageslide-directive', 'service']);
 
-appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, socket) {
+appControllers.controller('appCtrl', ['$scope', 'socket','service', function ($scope, socket, service) {
     $scope.model = {
         risk: 1,
         effort: 1,
         complexity: 0,
         size: 1,
         connected: "true",
-        userName: "Anonymous"
+        userName: "Anonymous",
+        password: "",
+        room: ""
         //userId: undefined
     };
+    $scope.userData = {};
+    $scope.room = 'gregRoom';
+    $scope.connectionStatus = false;
+    
+    //Save form data in the menu
+    $scope.saveConnectionData = function(){
+        $scope.userData.room = $scope.model.room;
+        $scope.userData.userName = $scope.model.userName;
+        $scope.userData.password = $scope.model.password;
+        socket.emit('joiningRoom',  $scope.userData, function(connectionStatus){
+            $scope.connectionStatus = connectionStatus;
+            console.log('Entered in room: ' + $scope.model.room);
+            $('.online').css('color','limegreen');
+        });
+        $scope.sendModel();
+    }
     
     //Menu open/close variable
     $scope.checked = false; // This will be binded using the ps-open attribute
@@ -33,9 +51,9 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
     });
     
     $scope.$watch( 'model.userName', function (newValue, oldValue) {
-        if (newValue !== oldValue) {
-            $scope.sendModel();
-        }
+//        if (newValue !== oldValue) {
+//            $scope.sendModel();
+//        }
     });          
                          
     $scope.sendModel = function () {  
@@ -50,6 +68,7 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
             connected: $scope.model.connected
             //userId: $scope.model.userId
         });
+        //socket.broadcast($scope.room,'updateModel', $scope.model);
     }
     
     //Open or close the menu
@@ -59,8 +78,7 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
  
     //When connection is established make green the connection icon
     socket.on('connect', function (data) {
-        console.log("connected");
-        $('.online').css('color','limegreen');
+        console.log("SOxket Connection Established");
     });
  
     //When connection is off make red the connection icon
