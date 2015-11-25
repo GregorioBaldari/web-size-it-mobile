@@ -1,7 +1,8 @@
 var mainApp = angular.module('mainApp', [
     'ngRoute',
     'appControllers',
-    "pageslide-directive"
+    "pageslide-directive",
+    "service"
 ]);
 
 /* Working but removed for now.
@@ -56,6 +57,23 @@ mainApp.factory('socket', ['$rootScope', function ($rootScope) {
     var socket = io("https://wesizeit.herokuapp.com");
     //var socket = io('http://localhost:3000');
   return {
+      
+    getSocket : function () {
+        return socket;
+    },
+      
+    join: function (room) {
+        return function () {
+            socket.join(room);
+        };
+    },
+      
+    broadcast: function(room,event, data) {
+        return function () {
+            socket.broadcast.to(room).emit(event, data);
+        };
+    },
+      
     on: function (eventName, callback) {
         function wrapper() {
             var args = arguments;

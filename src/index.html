@@ -65,9 +65,12 @@
                 <h2>Hello User</h2>
                 <p>Tell me whou you are</p>
                 <div class="input-group">
-                    <input ng-model="model.userName"  ng-model-options="{ debounce: 1000 }" type="text" class="form-control" placeholder="Type here.." aria-describedby="basic-addon2">
+                    <input ng-model="model.userName"  ng-model-options="{ debounce: 1000 }" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon2">
+                    <input ng-model="model.room"  ng-model-options="{ debounce: 1000 }" type="text" class="form-control" placeholder="Room" aria-describedby="basic-addon2">
+                    <input ng-model="model.password"  ng-model-options="{ debounce: 1000 }" type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
                 </div>
-                <a ng-click="toggle()" class="tiny button" >Close</a>
+                <a ng-click="saveConnectionData()" class="tiny button" >Save Data</a>
+                <a ng-click="toggle()" class="tiny button" >Close Menu</a>
             </div>
         </pageslide>
     </div>
@@ -79,26 +82,33 @@
     
     <!-- Angular
     ================================================== -->
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src="js/angular-touch.min.js"></script>
-    <script src="js/ui-bootstrap-0.13.4.min.js"></script>
-    <script src="js/angular-route.min.js"></script>
-    <script src="js/angular-pageslide-directive.min.js"></script>
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+<!--    <script src="js/ui-bootstrap-0.13.4.min.js"></script>-->
+    <script src="bower_components/angular-ui-bootstrap-bower/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-ng-pageslide/dist/angular-pageslide-directive.min.js"></script>
 
-
+    <!-- User-App
+    ================================================== -->
+    <script src="bower_components/userapp/userapp.client.js"></script>
+    <script src="bower_components/userapp-angular/angularjs.userapp.js"></script>
     
     <!-- JQuery
     ================================================== -->
-    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     
     <!-- Bootstrap
     ================================================== -->
-    <script src="js/bootstrap.min.js"></script>  
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>  
     
+    <script src="js/service.js"></script>
     <script src="js/controller.js"></script>
     <script src="js/app.js"></script>
     
     <!-- SocketIO
     ================================================== -->
-    <script src="js/socket.io.js"></script>
+<!--    <script src="js/socket.io.js"></script>-->
+    <script src="bower_components/sio-client/socket.io.js"></script>
 </html>
