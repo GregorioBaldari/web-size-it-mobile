@@ -13,8 +13,6 @@
         "angular-route": "latest",
         "angular-ui-bootstrap-bower" : "0.13.4",
         "angular-sanitize" : "latest",
-        "userapp" : "latest",
-        "userapp-angular" : "latest",
         "sio-client" : "latest"
   },
   "resolutions" : {
