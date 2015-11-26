@@ -18,6 +18,7 @@ appControllers.controller('appCtrl', ['$scope', 'socket','service', function ($s
     
     //Save form data in the menu
     $scope.saveConnectionData = function(){
+        $scope.toggle();
         $scope.userData.room = $scope.model.room;
         $scope.userData.userName = $scope.model.userName;
         $scope.userData.password = $scope.model.password;
@@ -48,13 +49,7 @@ appControllers.controller('appCtrl', ['$scope', 'socket','service', function ($s
         if (newValue !== oldValue) {
             $scope.sendModel();
         }
-    });
-    
-    $scope.$watch( 'model.userName', function (newValue, oldValue) {
-//        if (newValue !== oldValue) {
-//            $scope.sendModel();
-//        }
-    });          
+    });      
                          
     $scope.sendModel = function () {  
         $scope.model.size = $scope.model.risk * ($scope.model.complexity + $scope.model.effort);

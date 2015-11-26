@@ -27,6 +27,6 @@
     "commit": "78e4ff84e94581650005ff4c062a4bbbe974716a"
   },
   "_source": "git://github.com/JeremyPinhel/ng-pageslide.git",
-  "_target": "*",
+  "_target": "0.1.6",
   "_originalSource": "angular-ng-pageslide"
 }
