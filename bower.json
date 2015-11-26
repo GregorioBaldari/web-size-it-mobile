@@ -12,7 +12,6 @@
         "angular-touch":"latest",
         "angular-route": "latest",
         "angular-ui-bootstrap-bower" : "0.13.4",
-        "angular-ng-pageslide" : "0.1.6",
         "angular-sanitize" : "latest",
         "userapp" : "latest",
         "userapp-angular" : "latest",
