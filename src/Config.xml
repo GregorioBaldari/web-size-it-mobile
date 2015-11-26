@@ -19,6 +19,6 @@
 
     <preference name="Orientation" value="landscape" />
     
-    <gap:plugin name="org.li8.inappbrowser" version="0.1" />
+<!--    <gap:plugin name="org.li8.inappbrowser" version="0.1" />-->
     
 </widget>
