@@ -40,29 +40,10 @@ commands-container {
    background: #eee;
 }
 
-.open-menu-btn{
-    position: absolute;
-    top: 4px;
-    left: 5px;
-    color: darkgray;
-}
-
-h1 {
-    background-color: #0275d8;
-    margin-top: 0;
-    margin-bottom: 3px;
-    color: #fff;
-    font-size: 14px;
-    padding: 2px;
-    padding-left: 60px;
-}
-
 .online{
-    color: red;
-    font-size: 0.5em;
-    position: absolute;
-    top: 4px;
-    right: 5px;
+    color: #FF3333;
+    padding-right: 0.5em;
+    font-weight: bold;
 }
 #summaryTable{
     padding-top: 0px;
@@ -93,4 +74,38 @@ h1 {
     -webkit-box-shadow: 0px 0px 4px 0px #ffffff; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
     box-shadow: 0px 0px 4px 0px #ffffff; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
     -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primary{
+    padding: 2em 0;
+    font-size: 1.75em;
+    border-radius:0;
+    border-color: #222;
+}
+
+.panel-body{
+    padding: 0;
+}
+.panel-heading{
+    background-color: #444;
+    color: #FFFFFF;
+}
+.btn-group .btn+.btn, .btn-group .btn+.btn-group, .btn-group .btn-group+.btn, .btn-group .btn-group+.btn-group{
+    margin-left: 0;
+}
+.values-wrapper{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.navbar{
+    padding: 0.5em 0;
+    font-size: 1.25em;
+    background-color: #0275d8;
+    border-radius: 0;
+}
+.navbar-title{
+    color: #FFF;   
+    margin: 0;
+    padding-left: 0.5em;
 }

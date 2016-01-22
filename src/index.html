@@ -44,54 +44,59 @@
     <title>Scrumplify</title>
 </head>
 <body ng-controller="appCtrl">
-    <h1>WeSizeIT (Mobile)</h1>
-    <span class="online">online</span>
-    <div>
+    <div class="navbar clearfix">
+        <a class="open-menu-btn btn btn-default left" href="" ng-click="toggle()">Menu</a>
+        <h4 class="navbar-title left">WeSizeIT (Mobile)</h4>
+        <h6 class="right online">&#9733;</h6>
+    </div>
+        <div>
         <div>
             <p class="size-result">{{model.size}}</p>    
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading selector-heading">
-                Risk
-            </div>
-            <div class="panel-body">
-                <div class="btn-group parameterSelector">
-                    <label class="btn btn-primary risk-selector" ng-model="model.risk" btn-radio="1">None (1)</label>
-                    <label class="btn btn-primary risk-selector" ng-model="model.risk" btn-radio="2">2</label>
-                    <label class="btn btn-primary risk-selector" ng-model="model.risk" btn-radio="3">3</label>
+        <div class="values-wrapper">
+            <div class="">
+                <div class="panel-heading selector-heading">
+                    Risk
+                </div>
+                <div class="panel-body">
+                    <div class="btn-group parameterSelector">
+                        <label class="btn btn-primary risk-selector" ng-model="model.risk" btn-radio="1">1</label>
+                        <label class="btn btn-primary risk-selector" ng-model="model.risk" btn-radio="2">2</label>
+                        <label class="btn btn-primary risk-selector" ng-model="model.risk" btn-radio="3">3</label>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading selector-heading">
-                Complexity
-            </div>
-            <div class="panel-body">
-                <div class="btn-group parameterSelector">
-                    <label class="btn btn-primary complexity-selector" ng-model="model.complexity" btn-radio="0">None (0)</label>
-                    <label class="btn btn-primary complexity-selector" ng-model="model.complexity" btn-radio="1">1</label>
-                    <label class="btn btn-primary complexity-selector" ng-model="model.complexity" btn-radio="2">2</label>
-                    <label class="btn btn-primary complexity-selector" ng-model="model.complexity" btn-radio="3">3</label>
+            <div class="">
+                <div class="panel-heading selector-heading">
+                    Complexity
+                </div>
+                <div class="panel-body">
+                    <div class="btn-group parameterSelector">
+                        <label class="btn btn-primary complexity-selector" ng-model="model.complexity" btn-radio="0">0</label>
+                        <label class="btn btn-primary complexity-selector" ng-model="model.complexity" btn-radio="1">1</label>
+                        <label class="btn btn-primary complexity-selector" ng-model="model.complexity" btn-radio="2">2</label>
+                        <label class="btn btn-primary complexity-selector" ng-model="model.complexity" btn-radio="3">3</label>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="panel panel-default">  
-            <div class="panel-heading selector-heading">
-                Effort
-            </div>
-            <div class="panel-body">
-                <div class="btn-group parameterSelector">
-                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="1">1</label>
-                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="2">2</label>
-                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="3">3</label>
-                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="5">5</label>
-                    <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="8">8</label>
+            <div class="">  
+                <div class="panel-heading selector-heading">
+                    Effort
+                </div>
+                <div class="panel-body">
+                    <div class="btn-group parameterSelector">
+                        <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="1">1</label>
+                        <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="2">2</label>
+                        <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="3">3</label>
+                        <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="5">5</label>
+                        <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="8">8</label>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div>
-        <a class="open-menu-btn" href="" ng-click="toggle()">Menu</a>
+        
         <pageslide ps-open="checked" ps-side="left">
             <div style="padding:20px">
                 <a class="open-menu-btn" href="" ng-click="toggle()">Menu</a>
