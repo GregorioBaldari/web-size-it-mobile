@@ -71,7 +71,7 @@ appControllers.controller('appCtrl', ['$scope', 'socket', function ($scope, sock
  
     //When connection is established make green the connection icon
     socket.on('connect', function (data) {
-        console.log("SOxket Connection Established");
+        console.log("Socket Connection Established");
     });
  
     //When connection is off make red the connection icon
