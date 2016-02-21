@@ -2,56 +2,28 @@
 <html ng-app="mainApp">
 
 <!-- Bootstrap theme -->
-<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/scss/vendor/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/scss/vendor/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/foundation/5.0.0/css/foundation.min.css">
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <style>
-            /* Needed for hiding crollbars when pushing */
-            html {
-                overflow-x: hidden;
-            }
-            .ng-pageslide {
-                background: #eee;
-            }
-            body.ng-pageslide-body-open::before {
-                content: '.';
-                display: block;
-                position: absolute;
-                top: 0;
-                background-color: rgb(0,0,0);
-                left: 0
-                bottom: 0;
-                z-index: 1;
-                opacity: 0.5;
-                transition: opacity 1s;
-            }
-            body.ng-pageslide-body-closed::before {
-                transition: opacity 1s;
-                opacity: 0;
-                content: '.';
-                display: block;
-                position: absolute;
-                top: 0;
-                background-color: rgb(0,0,0);
-                left: 0;
-                bottom: 0;
-                z-index: 1;
-                pointer-events: none;
-            }
-        </style>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<style>
+    /* Needed for hiding crollbars when pushing */
+
+</style>
+
 <head>
     <title>Scrumplify</title>
 </head>
+
 <body ng-controller="appCtrl">
     <div class="navbar clearfix">
         <a class="open-menu-btn btn btn-default left" href="" ng-click="toggle()">Menu</a>
         <h4 class="navbar-title left">WeSizeIT (Mobile)</h4>
         <h6 class="right online">&#9733;</h6>
     </div>
+    <div>
         <div>
-        <div>
-            <p class="size-result">{{model.size}}</p>    
+            <p class="size-result">{{model.size}}</p>
         </div>
         <div class="values-wrapper">
             <div class="">
@@ -59,7 +31,7 @@
                     Risk
                 </div>
                 <div class="panel-body">
-                    <div class="btn-group parameterSelector">
+                    <div class="parameterSelector">
                         <label class="btn btn-primary risk-selector" ng-model="model.risk" btn-radio="1">1</label>
                         <label class="btn btn-primary risk-selector" ng-model="model.risk" btn-radio="2">2</label>
                         <label class="btn btn-primary risk-selector" ng-model="model.risk" btn-radio="3">3</label>
@@ -71,7 +43,7 @@
                     Complexity
                 </div>
                 <div class="panel-body">
-                    <div class="btn-group parameterSelector">
+                    <div class="parameterSelector">
                         <label class="btn btn-primary complexity-selector" ng-model="model.complexity" btn-radio="0">0</label>
                         <label class="btn btn-primary complexity-selector" ng-model="model.complexity" btn-radio="1">1</label>
                         <label class="btn btn-primary complexity-selector" ng-model="model.complexity" btn-radio="2">2</label>
@@ -79,12 +51,12 @@
                     </div>
                 </div>
             </div>
-            <div class="">  
+            <div class="">
                 <div class="panel-heading selector-heading">
                     Effort
                 </div>
                 <div class="panel-body">
-                    <div class="btn-group parameterSelector">
+                    <div class="parameterSelector">
                         <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="1">1</label>
                         <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="2">2</label>
                         <label class="btn btn-primary parameterSelectorItem" ng-model="model.effort" btn-radio="3">3</label>
@@ -96,7 +68,7 @@
         </div>
     </div>
     <div>
-        
+
         <pageslide ps-open="checked" ps-side="left">
             <div style="padding:20px">
                 <a class="open-menu-btn" href="" ng-click="toggle()">Menu</a>
@@ -107,36 +79,37 @@
                     <input ng-model="model.room" type="text" class="form-control" placeholder="Room" aria-describedby="basic-addon2">
                     <input ng-model="model.password" type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
                 </div>
-                <a ng-click="saveConnectionData()" class="tiny button" >Save Data</a>
+                <a ng-click="saveConnectionData()" class="tiny button">Save Data</a>
             </div>
         </pageslide>
     </div>
 </body>
-    
-    <!-- Phonegap for Adobe PhoneGap builder
+
+<!-- Phonegap for Adobe PhoneGap builder
     ================================================== -->
-    <script src="phonegap.js"></script>
-    
-    <!-- Angular
+<script src="phonegap.js"></script>
+
+<!-- Angular
     ================================================== -->
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
-    <script src="bower_components/angular-ui-bootstrap-bower/ui-bootstrap.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
-    
-    <!-- JQuery
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-touch/angular-touch.min.js"></script>
+<script src="bower_components/angular-ui-bootstrap-bower/ui-bootstrap.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+
+<!-- JQuery
     ================================================== -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    
-    <!-- Bootstrap
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+<!-- Bootstrap
     ================================================== -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="libs/angular-pageslide-directive.min.js"></script>
-    
-    <script src="js/controller.js"></script>
-    <script src="js/app.js"></script>
-    
-    <!-- SocketIO
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="libs/angular-pageslide-directive.min.js"></script>
+
+<script src="js/controller.js"></script>
+<script src="js/app.js"></script>
+
+<!-- SocketIO
     ================================================== -->
-    <script src="bower_components/sio-client/socket.io.js"></script>
+<script src="bower_components/sio-client/socket.io.js"></script>
+
 </html>

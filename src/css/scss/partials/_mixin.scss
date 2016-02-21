@@ -1,0 +1,312 @@
+
+//------------------------------------
+//    $MIXINS
+//------------------------------------
+
+
+@import "rem";
+@import "arrow";
+
+
+@mixin box-sizing($sizing-prop) {
+    -webkit-box-sizing: $sizing-prop;
+    -moz-box-sizing: $sizing-prop;
+    box-sizing: $sizing-prop;
+    //*behavior:url(/wp-content/themes/areasq/style/boxsizing.htc); // see https://github.com/Schepp/box-sizing-polyfill
+}
+
+@mixin placeholder-color($color) {
+    &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color: $color;
+    }
+
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: $color;
+        opacity: 1;
+    }
+
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: $color;
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $color;
+    }
+}
+
+
+
+@mixin border-radius($b-rad: null) {
+    @if($b-rad != null) {
+        -webkit-border-radius: $b-rad;
+        border-radius: $b-rad;
+    }
+    @else {
+        $b-rad: 4px;
+        -webkit-border-radius: $b-rad;
+        border-radius: $b-rad;
+    }
+}
+
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin flexbox-container {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+@mixin flexbox-container-direction ($prop) {
+    -webkit-flex-direction: $prop;
+    flex-direction: $prop;
+}
+
+@mixin flexbox-item($prop) {
+    -webkit-box-flex: $prop; /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: $prop; /* OLD - Firefox 19- */
+    -webkit-flex: $prop; /* Chrome */
+    -ms-flex: $prop; /* IE 10 */
+    flex: $prop;
+}
+
+// CSS Transition
+//	Usage: @include transition(width,0.3s,ease-out);
+@mixin transition($transition-property...) {
+    -webkit-transition: #{$transition-property};
+    -moz-transition: #{$transition-property};
+    -ms-transition: #{$transition-property};
+    transition: #{$transition-property};
+}
+
+
+
+@mixin transform-origin($to-prop) {
+    -webkit-transform-origin: $to-prop;
+    -moz-transform-origin: $to-prop;
+    -ms-transform-origin: $to-prop;
+    transform-origin: $to-prop;
+}
+
+@mixin transform-rotate($val) {
+    -webkit-transform: rotate($val);
+    -moz-transform: rotate($val);
+    -ms-transform: rotate($val);
+    transform: rotate($val);
+}
+
+@mixin transform-scale($val) {
+    -webkit-transform: scale($val);
+    -moz-transform: scale($val);
+    -ms-transform: scale($val);
+    transform: scale($val);
+}
+
+
+
+// Linear Gradient
+@mixin linear-gradient($from, $to, $pfrom: 0%, $pto: 100%) {
+    background-color: $to;
+    background-image: -webkit-gradient(linear, 0% $pfrom, 0% $pto, from($from), to($to));
+    background-image: -webkit-linear-gradient($from $pfrom, $to $pto);
+    background-image: -moz-linear-gradient($from $pfrom, $to $pto);
+    background-image: linear-gradient($from $pfrom, $to $pto);
+}
+
+
+
+@mixin background-size($bs-prop) {
+    -webkit-background-size: $bs-prop;
+    background-size: $bs-prop;
+}
+
+
+// Box Shadow - @include box-shadow (0px 0px 4px 0px #FFF);
+@mixin box-shadow($box-property: 0px 0px 4px 0px #FFF) {
+    -webkit-box-shadow: #{$box-property};
+    box-shadow: #{$box-property};
+}
+
+
+
+
+// Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback
+//	Usage: @include font-size(1, large);
+@mixin font-size( $decimal-size, $keyword: null ) {
+    @if $keyword {
+        font-size: $keyword;
+    }
+    @else {
+        font-size: $decimal-size * $base-font-multiplier * 16px;
+    }
+
+    font-size: $decimal-size * 1rem;
+}
+
+
+
+
+// Smarter media queries
+
+// http://www.alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
+// set viewport media queries and IE<9 fallback with @content
+@mixin mq($point, $IE9: true, $query1: min, $query2: width) {
+    @if $IE9 == true {
+        .lt-ie9 {
+            @content;
+        }
+
+        @media screen and (#{$query1}-#{$query2}: $point) {
+            @content;
+        }
+    }
+
+    @else {
+        @media screen and (#{$query1}-#{$query2}: $point) {
+            @content;
+        }
+    }
+}
+
+
+
+//************************************************************************//
+// Example: @include prefixer(border-radius, $radii, webkit ms spec);
+//************************************************************************//
+// Variables located in /settings/_prefixer.scss
+
+@mixin prefixer ($property, $value, $prefixes) {
+    @each $prefix in $prefixes {
+        @if $prefix == webkit {
+            -webkit-#{$property}: $value;
+        }
+        @else if $prefix == moz {
+            -moz-#{$property}: $value;
+        }
+        @else if $prefix == ms {
+            -ms-#{$property}: $value;
+        }
+        @else if $prefix == o {
+            -o-#{$property}: $value;
+        }
+        @else if $prefix == spec {
+            #{$property}: $value;
+        }
+        @else {
+            @warn "Unrecognized prefix: #{$prefix}";
+        }
+    }
+}
+
+// additional mixins for the mobile navigation
+@mixin translate($x, $y) {
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+@mixin transitions($property, $duration, $function) {
+    -webkit-transition: ($property $duration $function);
+    -moz-transition: ($property $duration $function);
+    -ms-transition: ($property $duration $function);
+    -o-transition: ($property $duration $function);
+    transition: ($property $duration $function);
+}
+
+
+
+// Shorthand mixin. Supports multiple parentheses-deliminated values for each variable.
+// Example: @include transition (all 2s ease-in-out);
+//          @include transition (opacity 1s ease-in 2s, width 2s ease-out);
+//          @include transition-property (transform, opacity);
+
+@mixin transition ($properties...) {
+    // Fix for vendor-prefix transform property
+    $needs-prefixes: false;
+    $webkit: ();
+    $moz: ();
+    $spec: ();
+
+    // Create lists for vendor-prefixed transform
+    @each $list in $properties {
+        @if nth($list, 1) == "transform" {
+            $needs-prefixes: true;
+            $list1: -webkit-transform;
+            $list2: -moz-transform;
+            $list3: ();
+
+            @each $var in $list {
+                $list3: join($list3, $var);
+
+                @if $var != "transform" {
+                    $list1: join($list1, $var);
+                    $list2: join($list2, $var);
+                }
+            }
+
+            $webkit: append($webkit, $list1);
+            $moz: append($moz, $list2);
+            $spec: append($spec, $list3);
+        }
+        // Create lists for non-prefixed transition properties
+        @else {
+            $webkit: append($webkit, $list, comma);
+            $moz: append($moz, $list, comma);
+            $spec: append($spec, $list, comma);
+        }
+    }
+
+    @if $needs-prefixes {
+        -webkit-transition: $webkit;
+        -moz-transition: $moz;
+        transition: $spec;
+    }
+    @else {
+        @if length($properties) >= 1 {
+            @include prefixer(transition, $properties, webkit moz spec);
+        }
+
+        @else {
+            $properties: all 0.15s ease-out 0s;
+            @include prefixer(transition, $properties, webkit moz spec);
+        }
+    }
+}
+
+@mixin transition-property ($properties...) {
+    -webkit-transition-property: transition-property-names($properties, 'webkit');
+    -moz-transition-property: transition-property-names($properties, 'moz');
+    transition-property: transition-property-names($properties, false);
+}
+
+
+@mixin transition-duration ($times...) {
+    @include prefixer(transition-duration, $times, webkit moz spec);
+}
+
+
+@mixin transition-timing-function ($motions...) {
+    // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
+    @include prefixer(transition-timing-function, $motions, webkit moz spec);
+}
+
+
+@mixin transition-delay ($times...) {
+    @include prefixer(transition-delay, $times, webkit moz spec);
+}
+
+
+@mixin transform($property: none) {
+    @include prefixer(transform, $property, webkit moz ms spec);
+}

@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "file": "style.css",
+  "sources": [
+    "style.scss",
+    "partials/_base.scss",
+    "partials/_mixin.scss",
+    "partials/_variables.scss",
+    "partials/_layout.scss",
+    "partials/_buttons.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "",
+  "names": []
+}

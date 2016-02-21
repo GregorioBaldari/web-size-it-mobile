@@ -1,0 +1,144 @@
+// html {
+//     overflow-x: hidden;
+// }
+// .ng-pageslide {
+//     background: #eee;
+// }
+// body.ng-pageslide-body-open::before {
+//     content: '.';
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     background-color: rgb(0,0,0);
+//     left: 0;
+//     bottom: 0;
+//     z-index: 1;
+//     opacity: 0.5;
+//     transition: opacity 1s;
+// }
+// body.ng-pageslide-body-closed::before {
+//     transition: opacity 1s;
+//     opacity: 0;
+//     content: '.';
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     background-color: rgb(0,0,0);
+//     left: 0;
+//     bottom: 0;
+//     z-index: 1;
+//     pointer-events: none;
+// }
+
+
+// .commands-container {
+//     float: left;
+// }
+
+// .parameterSelector{
+//     width: 100%; 
+// }
+
+// .parameterSelectorItem{
+//     float: left;
+//     width: 20%;
+// }
+
+// .risk-selector {
+//     width: 33.3%;
+// }
+
+// .complexity-selector{
+//     width: 25%;
+// }
+
+// .parameterSelectorItemTraditional{
+//     width: 25%;
+// }
+
+// .selector-heading{
+//     text-align: -webkit-center;
+// }
+
+// .nav, .pagination, .carousel, .panel-title a { 
+//     cursor: pointer; 
+// }
+
+// .size-result {
+//     text-align: -webkit-center;
+//     font-size: 5em;
+// }
+
+// .menu-panel {
+//    background: #eee;
+// }
+
+// .online{
+//     color: #FF3333;
+//     padding-right: 0.5em;
+//     font-weight: bold;
+// }
+// #summaryTable{
+//     padding-top: 0px;
+//     padding-bottom: 0px;
+// }
+// .menu-btn {
+//     border: none;
+//     display: inline-block;
+//     outline: 0;
+//     padding: 2px 5px;
+//     vertical-align: middle;
+//     position: relative;
+//     overflow: hidden;
+//     text-decoration: none !important;
+//     color: #fff;
+//     background-color: #000;
+//     text-align: center;
+//     transition: .2s ease-out;
+//     cursor: pointer;
+//     white-space: nowrap;
+//     font-family: Verdana, sans-serif;
+//     font-size: 5px;
+//     color: #FFFFFF;
+//     background-color: #8AC007;
+//     border-radius: 3px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+//     /* useful if you don't want a bg color from leaking outside the border: */
+//     background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+//     -webkit-box-shadow: 0px 0px 4px 0px #ffffff; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+//     box-shadow: 0px 0px 4px 0px #ffffff; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+//     -webkit-tap-highlight-color: transparent;
+// }
+
+// .btn-primary{
+//     padding: 2em 0;
+//     font-size: 1.75em;
+//     border-radius:0;
+//     border-color: #222;
+// }
+
+// .panel-body{
+//     padding: 0;
+// }
+// .panel-heading{
+//     background-color: #444;
+//     color: #FFFFFF;
+// }
+// .btn-group .btn+.btn, .btn-group .btn+.btn-group, .btn-group .btn-group+.btn, .btn-group .btn-group+.btn-group{
+//     margin-left: 0;
+// }
+// .values-wrapper{
+//     width: 100%;
+//     position: fixed;
+//     bottom: 0;
+// }
+// .navbar{
+//     padding: 0.5em 0;
+//     font-size: 1.25em;
+//     background-color: #0275d8;
+//     border-radius: 0;
+// }
+// .navbar-title{
+//     color: #FFF;   
+//     margin: 0;
+//     padding-left: 0.5em;
+// }
