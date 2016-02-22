@@ -144,4 +144,15 @@
 // }
 .values-wrapper{
 	background-color: $color-p-2;
+	.btn{
+		margin-bottom: 1em;
+	}
+	.parameterSelector{
+		border-bottom: 1px solid $color-white;
+	}
+	.panel-heading{
+		text-align: center;
+		text-transform: uppercase;
+		color: $color-p-1;
+	}
 }

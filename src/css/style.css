@@ -1,5 +1,13 @@
 .values-wrapper {
   background-color: #25e0c3; }
+  .values-wrapper .btn {
+    margin-bottom: 1em; }
+  .values-wrapper .parameterSelector {
+    border-bottom: 1px solid #FFFFFF; }
+  .values-wrapper .panel-heading {
+    text-align: center;
+    text-transform: uppercase;
+    color: #071e4a; }
 
 .btn {
   padding: 1em; }
@@ -8,5 +16,7 @@
     border: 1px solid #FFFFFF; }
     .btn-primary.active {
       background-color: #071e4a; }
+    .btn-primary:hover {
+      background-color: #092761; }
 
 /*# sourceMappingURL=style.css.map */

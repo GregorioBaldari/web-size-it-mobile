@@ -1,11 +1,27 @@
 /* line 145, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
 .values-wrapper {
   background-color: #25e0c3; }
+  /* line 147, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
+  .values-wrapper .btn {
+    margin-bottom: 1em; }
+  /* line 150, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
+  .values-wrapper .parameterSelector {
+    border-bottom: 1px solid #FFFFFF; }
+  /* line 153, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
+  .values-wrapper .panel-heading {
+    text-align: center;
+    text-transform: uppercase;
+    color: #071e4a; }
 
 /* line 1, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_buttons.scss */
 .btn {
-  padding: 1em, .btn;
-    padding-background-color: transparent;
-    padding-border: 1px solid #FFFFFF; }
+  padding: 1em; }
+  /* line 4, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_buttons.scss */
+  .btn-primary {
+    background-color: transparent;
+    border: 1px solid #FFFFFF; }
+    /* line 7, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_buttons.scss */
+    .btn-primary.active {
+      background-color: #071e4a; }
 
 /*# sourceMappingURL=style.css.map */
