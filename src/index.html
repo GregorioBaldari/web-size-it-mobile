@@ -2,9 +2,9 @@
 <html ng-app="mainApp">
 
 <!-- Bootstrap theme -->
-<link rel="stylesheet" href="css/scss/vendor/bootstrap-theme.min.css">
+<!-- <link rel="stylesheet" href="css/scss/vendor/bootstrap-theme.min.css"> -->
 <link rel="stylesheet" href="css/scss/vendor/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/foundation/5.0.0/css/foundation.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/foundation/5.0.0/css/foundation.min.css"> -->
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style>
     /* Needed for hiding crollbars when pushing */
@@ -17,9 +17,12 @@
 
 <body ng-controller="appCtrl">
     <div class="navbar clearfix">
-        <a class="open-menu-btn btn btn-default left" href="" ng-click="toggle()">Menu</a>
-        <h4 class="navbar-title left">WeSizeIT (Mobile)</h4>
-        <h6 class="right online">&#9733;</h6>
+        <a class="open-menu-btn btn btn-default pull-left" href="" ng-click="toggle()">Menu</a>
+        <ul>
+            <li class="pull-left"><i class="fa fa-cog"></i></li>
+            <li class="pull-left"><i class="fa fa-info-circle"></i></li>
+        </ul>
+        <h6 class="pull-right online">&#9733;</h6>
     </div>
     <div>
         <div>

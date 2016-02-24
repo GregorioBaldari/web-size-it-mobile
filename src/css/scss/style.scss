@@ -5,7 +5,14 @@
 // @import "vendor/jquery-ui.structure.min.css";
 // @import "vendor/jquery-ui.theme.min.css";
     
-//Partials
+/*------------------------------------*\
+    ICON SETUP
+\*------------------------------------*/
+@import "font-awesome/font-awesome.scss";
+
+/*------------------------------------*\
+    PARTIALS
+\*------------------------------------*/
 @import "partials/_variables.scss";
 @import "partials/_mixin.scss";
 @import "partials/_layout.scss";
