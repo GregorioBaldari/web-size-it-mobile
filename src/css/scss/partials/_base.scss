@@ -145,6 +145,22 @@
 .navbar{
 	background-color: $color-p-1;
 	color: $color-white;
+	min-height: auto;
+	&-list{
+		&-icons{
+			font-size: 1.5em;
+			padding-left: 0.75em;
+			li{
+				margin-right: 0.75em;
+			}
+			.navbar-link{
+				color: $color-white;
+			}
+		}
+	}
+	.online{
+		margin-right: 0.75em;
+	}
 }
 
 .values-wrapper{

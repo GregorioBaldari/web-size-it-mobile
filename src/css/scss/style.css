@@ -9,8 +9,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.5.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  src: url("//netdna.bootstrapcdn.com/font-awesome/4.5.0/fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("//netdna.bootstrapcdn.com/font-awesome/4.5.0/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("//netdna.bootstrapcdn.com/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("//netdna.bootstrapcdn.com/font-awesome/4.5.0/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("//netdna.bootstrapcdn.com/font-awesome/4.5.0/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("//netdna.bootstrapcdn.com/font-awesome/4.5.0/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2720,21 +2720,46 @@
 
 /*------------------------------------*    PARTIALS
 \*------------------------------------*/
+/* line 1, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_normalise.scss */
+ul {
+  margin: 0;
+  padding: 0; }
+
+/* line 5, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_normalise.scss */
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 /* line 145, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
 .navbar {
   background-color: #071e4a;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  min-height: auto; }
+  /* line 150, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
+  .navbar-list-icons {
+    font-size: 1.5em;
+    padding-left: 0.75em; }
+    /* line 153, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
+    .navbar-list-icons li {
+      margin-right: 0.75em; }
+    /* line 156, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
+    .navbar-list-icons .navbar-link {
+      color: #FFFFFF; }
+  /* line 161, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
+  .navbar .online {
+    margin-right: 0.75em; }
 
-/* line 150, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
+/* line 166, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
 .values-wrapper {
   background-color: #25e0c3; }
-  /* line 152, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
+  /* line 168, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
   .values-wrapper .btn {
     margin-bottom: 1em; }
-  /* line 155, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
+  /* line 171, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
   .values-wrapper .parameterSelector {
     border-bottom: 1px solid #FFFFFF; }
-  /* line 158, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
+  /* line 174, /Users/antoninoriesi/Desktop/wesizeit/web-size-it-mobile/src/css/scss/partials/_base.scss */
   .values-wrapper .panel-heading {
     text-align: center;
     text-transform: uppercase;

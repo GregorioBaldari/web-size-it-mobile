@@ -17,10 +17,10 @@
 
 <body ng-controller="appCtrl">
     <div class="navbar clearfix">
-        <a class="open-menu-btn btn btn-default pull-left" href="" ng-click="toggle()">Menu</a>
-        <ul>
-            <li class="pull-left"><i class="fa fa-cog"></i></li>
-            <li class="pull-left"><i class="fa fa-info-circle"></i></li>
+        <!-- <a class="open-menu-btn btn btn-default pull-left" href="" ng-click="toggle()">Menu</a> -->
+        <ul class="navbar-list-icons clearfix pull-left">
+            <li class="pull-left"><a href="" class="open-menu-btn navbar-link"><i class="fa fa-cog" ng-click="toggle()"></i></a></li>
+            <li class="pull-left"><a href="" class="navbar-link"><i class="fa fa-info-circle"></i></a></li>
         </ul>
         <h6 class="pull-right online">&#9733;</h6>
     </div>

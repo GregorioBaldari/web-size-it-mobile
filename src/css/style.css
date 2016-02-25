@@ -2079,9 +2079,28 @@
 /*------------------------------------*\
     PARTIALS
 \*------------------------------------*/
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 .navbar {
   background-color: #071e4a;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  min-height: auto; }
+  .navbar-list-icons {
+    font-size: 1.5em;
+    padding-left: 0.75em; }
+    .navbar-list-icons li {
+      margin-right: 0.75em; }
+    .navbar-list-icons .navbar-link {
+      color: #FFFFFF; }
+  .navbar .online {
+    margin-right: 0.75em; }
 
 .values-wrapper {
   background-color: #25e0c3; }
